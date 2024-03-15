@@ -51,7 +51,9 @@ function App() {
           {Object.keys(cep.logradouro).length > 0 && (
             <div className="endereco">
               <span>{cep.logradouro}</span>
-              <span>Complemento: {cep.complemento}</span>
+              {Object.keys(cep.complemento).length > 0 && (
+                <span>Complemento: {cep.complemento}</span>
+              )}
               <span>{cep.bairro}</span>
             </div>
           )}
